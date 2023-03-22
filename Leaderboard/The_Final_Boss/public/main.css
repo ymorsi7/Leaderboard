@@ -1,0 +1,17 @@
+.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .navbar-dark .dropdown-menu {
+    background-color: #343a40;
+    border: none;
+  }
+  
+  .navbar-dark .dropdown-menu a {
+    color: #fff;
+  }
+  
+  .navbar-dark .dropdown-menu a:hover {
+    background-color: #555;
+  }
+  
