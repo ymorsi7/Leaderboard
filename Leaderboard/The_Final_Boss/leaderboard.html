@@ -28,13 +28,12 @@ Provide a RESTful API to manage adding/editing/showing comments
 </head>
 <body>
   <header>
-    <link rel = "icon" href = "public/sf.jpeg">
     <link rel = "stylesheet" href = "public/main.css">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3150/3150115.png" />
     <nav>
         <div class="navbar navbar-expand-md navbar-dark bg-dark mb-4" role="navigation">
-            <a class="navbar-brand" href="#">Leaderboard</a>
+            <a class="navbar-brand" href="/">Leaderboard</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -60,25 +59,82 @@ Provide a RESTful API to manage adding/editing/showing comments
                           <a class="dropdown-item" href="/signup">Sign Up</a>
                         </div>
                       </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/documentation">Documentation</a>
-                    </li>
                 </ul>
+            </div>
+
+            <div  class="navbar-right" id="navbarCollapse">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="/profile">Profile</a>
+                </li>
+              </ul>
             </div>
         </div>
     </nav>
   </header>
   <main>
-    <center>
-    <h1>Leaderboard</h1>
-    
-    </center>
 
-  </main>
+    <div class="container my-4">
+      <h1 class="text-center">Leaderboard</h1>
+    
+      <div class="row my-4">
+        <div class="col-md-8">
+  
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Project Idea</th>
+                <th>Team Members</th>
+                <th>Score</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for idea in ideas %}
+              <tr>
+                <td>{{ idea.rank }}</td>
+                <td>{{ idea.project_idea }}</td>
+                <td>{{ idea.team_members }}</td>
+                <td>{{ idea.score }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+    
+
+      </div>
+      <div>
+        <h3>Comments</h3>
+        <form>
+          <div class="form-group">
+            <label for="comment">Add a comment:</label>
+            <textarea class="form-control" id="comment" rows="3"></textarea>
+          </div>
+          <button type="submit"  class="btn btn-dark">Submit</button>
+        </form>
+        <hr>
+        {% for comment in comments %}
+        <div class="card my-2">
+          <div class="card-body">
+            <h5 class="card-title">{{ comment.author }}</h5>
+            <p class="card-text">{{ comment.body }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    
+    
+
+    </main>
+
+   
 </body>
 
 
-
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper"></script>
  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
  <script src = "public/main.js"></script>
  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

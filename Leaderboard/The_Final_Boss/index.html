@@ -16,13 +16,14 @@ Able to access login page from this page
 
 <body>
   <header>
-    <link rel="icon" href="public/sf.jpeg" />
     <link rel="stylesheet" href="/public/main.css" />
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+    <!--add favicon-->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3150/3150115.png" />
 
     <nav>
       <div class="navbar navbar-expand-md navbar-dark bg-dark mb-4" role="navigation">
-        <a class="navbar-brand" href="#">Leaderboard</a>
+        <a class="navbar-brand" href="/">Leaderboard</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
           aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -30,7 +31,7 @@ Able to access login page from this page
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="">Home <span>(Current)</span></a>
+              <a class="nav-link" href="/">Home <span>(Current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/leaderboard">Leaderboard</a>
@@ -38,7 +39,7 @@ Able to access login page from this page
             <li class="nav-item">
               <a class="nav-link" href="/updates">Updates</a>
             </li>
-
+            
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
@@ -48,16 +49,19 @@ Able to access login page from this page
                 <a class="dropdown-item" href="/login">Log In</a>
                 <a class="dropdown-item" href="/signup">Sign Up</a>
               </div>
-              <style>
-              
-  </style>
             </li>
+          </ul>
+        </div>
+
+        <div  class="navbar-right" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="/documentation">Documentation</a>
+              <a class="nav-link" href="/profile">Profile</a>
             </li>
           </ul>
         </div>
       </div>
+
     </nav>
   </header>
   <main>
@@ -81,8 +85,8 @@ Able to access login page from this page
         </p>
 
         <div class="call-to-action" style="display: flex; justify-content: center">
-          <a href="/signup.html"><button class="btn btn-dark mr-2 mb-4">Sign Up</button></a>
-          <a href="/login.html"><button class="btn btn-dark mb-4">Log In</button></a>
+          <a href="/signup"><button class="btn btn-dark mr-2 mb-4">Sign Up</button></a>
+          <a href="/login"><button class="btn btn-dark mb-4">Log In</button></a>
         </div>
       </div>
     </div>

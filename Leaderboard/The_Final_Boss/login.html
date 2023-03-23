@@ -9,19 +9,19 @@ Authenticated users
 Access to registration page if needed
 
 -->
+
 <html>
 <head>
   <title>Log In</title>
 </head>
 <body>
   <header>
-    <link rel = "icon" href = "public/sf.jpeg">
     <link rel = "stylesheet" href = "public/main.css">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3150/3150115.png" />
     <nav>
         <div class="navbar navbar-expand-md navbar-dark bg-dark mb-4" role="navigation">
-            <a class="navbar-brand" href="#">Leaderboard</a>
+            <a class="navbar-brand" href="/">Leaderboard</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -29,7 +29,7 @@ Access to registration page if needed
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="">Home <span>(Current)</span></a>
+                        <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/leaderboard">Leaderboard</a>
@@ -38,7 +38,7 @@ Access to registration page if needed
                         <a class="nav-link" href="/updates">Updates</a>
                     </li>
                    
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown active">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           Log In / Sign Up
                         </a>
@@ -47,10 +47,14 @@ Access to registration page if needed
                           <a class="dropdown-item" href="/signup">Sign Up</a>
                         </div>
                       </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/documentation">Documentation</a>
-                    </li>
-                </ul>
+            </div>
+
+            <div  class="navbar-right" id="navbarCollapse">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="/profile">Profile</a>
+                </li>
+              </ul>
             </div>
         </div>
     </nav>
@@ -60,6 +64,25 @@ Access to registration page if needed
     <h1>Log In</h1>
     
     </center>
+
+    <div style="display: flex; justify-content: center; align-items: center; margin-top: 30px;">
+      <form style="width: 300px; padding: 20px; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0px 0px 5px rgba(0,0,0,0.1);">
+
+        <label for="username-email">Username or Email:</label>
+        <input type="text" id="username-email" name="username-email" style="display: block">
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" style="display: block">
+
+        <center>
+          <button type="submit" class="btn btn-dark" style="margin-top: 10px;">Log In</button>
+        </center>
+      </form>
+    </div>
+    
+    
+    
+    
 
   </main>
 </body>
